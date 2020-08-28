@@ -3,7 +3,7 @@
     <!-- Provides the application the proper gutter -->
     <v-container fluid pa-0 >
       <div class="pointUp"></div>
-      <div class="bottomView" ref="location">
+      <div class="bottomView" id="location">
         <div class="contactUs">
           <h1>
             <span class="mainTitle">找到食堂</span>
@@ -133,7 +133,7 @@ export default {
       }
     }
   }
-  @media screen and (max-width:1024px){
+  @media only screen and (max-width:1024px){
     .pointUp{
       bottom: 120vh;
       border-width: 0 50vw 8vh 50vw;
@@ -160,13 +160,26 @@ export default {
       display: inline-block!important;
     }
   }
-  @media screen and (max-width:768px){
+  @media only screen and (max-width:768px){
     .information{
       padding-top: 5vh;
       ul{
         padding: 0;
         li{
           font-size: 1.2rem!important;
+        }
+      }
+    }
+  }
+  @media only screen
+  and (max-width:375px)
+  and (device-height : 667px){
+    .information{
+      padding-top: 5vh;
+      ul{
+        padding: 0;
+        li{
+          font-size: .95rem!important;
         }
       }
     }

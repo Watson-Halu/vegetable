@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     goto (refName) {
-      var element = this.$refs[refName]
+      var element = document.getelementById(refName)
       console.log(element)
       var top = element.offsetTop
       window.scrollTo(0, top)
@@ -63,7 +63,7 @@ export default {
       display: block;
     }
   }
-  @media screen and (max-width:1024px){
+  @media only screen and (max-width:1024px){
     .nav-list-left{
       padding-left:0;
       width: 80%;
@@ -79,7 +79,7 @@ export default {
       // justify-items: ;;
     }
   }
-  @media screen and (max-width:767px){
+  @media only screen and (max-width:767px){
     .nav-list-left{
       img{
         transform: scale(1.75)

@@ -1,5 +1,8 @@
 <template>
-  <v-app>
+  <div id="app">
+    <router-view/>
+  </div>
+  <!-- <v-app>
     <v-main padding="0">
       <NavBar/>
       <TopContent/>
@@ -18,32 +21,17 @@
         &copy;{{ new Date().getFullYear() }} — <strong>素說食堂</strong>
       </v-col>
     </v-footer>
-  </v-app>
+  </v-app> -->
 </template>
 
 <script>
-import TopContent from './components/TopContent'
-import Menu from './components/Menu'
-import Begin from './components/Begin'
-import Location from './components/Location'
-import NavBar from './components/NavBar'
+// import TopContent from './components/TopContent'
+// import Menu from './components/Menu'
+// import Begin from './components/Begin'
+// import Location from './components/Location'
+// import NavBar from './components/NavBar'
 
 export default {
-  name: 'App',
 
-  components: {
-    TopContent,
-    Menu,
-    Begin,
-    Location,
-    NavBar
-  },
-
-  data () {
-    //
-  },
-  mounted () {
-    this.goto()
-  }
 }
 </script>

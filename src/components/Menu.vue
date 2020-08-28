@@ -6,7 +6,7 @@
       <div class="connectTopLeft"></div>
       <div class="connectTopRight"></div>
       <!-- 主內容 -->
-      <div class="middleView"  ref="menu">
+      <div class="middleView"  id="menu">
         <div class="menuText">
           <span class="menuTitle">
             素說菜單
@@ -138,12 +138,15 @@ export default {
           transform: scale(2.5)
         }
       }
+      .liLeft{
+        width: 100%;
+      }
       .liright{
         width: 100%;
       }
     }
   }
-  @media screen and (max-width:1024px){
+  @media only screen and (max-width:1024px){
     .middleView{
       padding: 10vh 5% 0 5%;
       background-size: cover;
@@ -170,7 +173,7 @@ export default {
       border-width: 8vh 50vw 0 0;
     }
   }
-  @media screen and (max-width:767px){
+  @media only screen and (max-width:767px){
     .middleView{
       padding: 10vh 5% 0 5%;
       background-size: cover;
@@ -187,6 +190,22 @@ export default {
     .connectBottomRight{
       bottom: 232vh;
       border-width: 8vh 50vw 0 0;
+    }
+  }
+  @media only screen
+  and (max-width:375px)
+  and (device-height : 667px){
+    .menuTitle{
+      font-size: 1.75rem!important;
+    }
+    .middleView{
+      padding: 10vh 5% 0 5%;
+      background-size: cover;
+      height: 80vh;
+      ul{
+        padding: .5vh 0 0 0;
+        font-size: .85rem;
+      }
     }
   }
 

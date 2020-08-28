@@ -6,7 +6,7 @@
       </div>
       <div class="connectAreaRight">
       </div>
-      <div class="bottomView"  ref="begin">
+      <div class="bottomView"  id="begin">
         <div class="begin">
           <h1>
             <span class="mainTitle">食堂起源</span>
@@ -82,18 +82,30 @@ export default {
       }
     }
   }
-  @media screen and (max-width:1024px){
+  @media only screen and (max-width:1024px){
     .bottomView{
       height: 80vh;
       padding-top: 20vh;
       background-size: cover;
     }
   }
-  @media screen and (max-width:768px){
+  @media only screen and (max-width:768px){
     .bottomView{
       height: 120vh;
       padding-top: 10vh;
       background-size: cover;
+    }
+  }
+  @media only screen
+  and (max-width:768px)
+  and (device-height : 667px){
+    .mainTitle{
+      font-size: 1.75rem;
+    }
+    .mainContent{
+      .content{
+        font-size: 0.85rem;
+      }
     }
   }
 </style>
