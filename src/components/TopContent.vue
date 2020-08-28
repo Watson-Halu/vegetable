@@ -56,7 +56,7 @@ export default {
     .topText{
       img{
         top: 25vh;
-      transform: scale(1.2)
+        transform: scale(1)
       }
     }
   }

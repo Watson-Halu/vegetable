@@ -84,6 +84,13 @@ export default {
   }
   @media screen and (max-width:1024px){
     .bottomView{
+      height: 80vh;
+      padding-top: 20vh;
+      background-size: cover;
+    }
+  }
+  @media screen and (max-width:768px){
+    .bottomView{
       height: 120vh;
       padding-top: 10vh;
       background-size: cover;

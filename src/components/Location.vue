@@ -151,10 +151,24 @@ export default {
       padding-top: 5vh;
       ul{
         padding: 0;
+        li{
+          font-size: 1.5rem!important;
+        }
       }
     }
     .mainContent{
       display: inline-block!important;
+    }
+  }
+  @media screen and (max-width:768px){
+    .information{
+      padding-top: 5vh;
+      ul{
+        padding: 0;
+        li{
+          font-size: 1.2rem!important;
+        }
+      }
     }
   }
 </style>

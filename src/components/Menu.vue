@@ -149,7 +149,8 @@ export default {
       background-size: cover;
       height: 80vh;
       ul{
-        padding: 2vh 0 0 0;
+        padding: 1vh 0 0 0;
+        font-size: 1.4rem;
       }
     }
     .connectTopLeft{
@@ -159,6 +160,25 @@ export default {
     .connectTopRight{
       top: 92vh;
       border-width: 8vh 0 0 50vw;
+    }
+    .connectBottomLeft{
+      bottom: 192vh;
+      border-width:0 50vw 8vh 0;;
+    }
+    .connectBottomRight{
+      bottom: 192vh;
+      border-width: 8vh 50vw 0 0;
+    }
+  }
+  @media screen and (max-width:767px){
+    .middleView{
+      padding: 10vh 5% 0 5%;
+      background-size: cover;
+      height: 80vh;
+      ul{
+        padding: 1vh 0 0 0;
+        font-size: .85rem;
+      }
     }
     .connectBottomLeft{
       bottom: 232vh;

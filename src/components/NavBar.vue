@@ -11,6 +11,7 @@
       <li class="nav-item"  v-for="item of items" :key="item.name" @click="scrollTo(item.id)">
         <span>
           {{ item.name }}
+          <span class="subtext">{{ item.subtext }}</span>
         </span>
       </li>
     </ul>
@@ -23,9 +24,9 @@ export default {
   data () {
     return {
       items: [
-        { name: 'Menu 素說菜單', id: 'menu' },
-        { name: 'About Us 食堂起源', id: 'begin' },
-        { name: 'Contact Us 找到食堂', id: 'location' }
+        { name: '素說菜單', subtext: 'Menu', id: 'menu' },
+        { name: '食堂起源', subtext: 'About Us ', id: 'begin' },
+        { name: '找到食堂', subtext: 'Contact Us ', id: 'location' }
       ]
     }
   },
@@ -39,7 +40,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
   .nav-list-left{
     list-style: none;
   }
@@ -57,5 +58,44 @@ export default {
   }
   .nav-item{
     margin-right: 50px;
+    text-align: center;
+    .subtext{
+      display: block;
+    }
+  }
+  @media screen and (max-width:1024px){
+    .nav-list-left{
+      padding-left:0;
+      width: 80%;
+      img{
+        width: 80%;
+      }
+    }
+    .nav-list-right{
+      width: 120%;
+      font-size:.9rem;
+      padding-left: 0mm;
+      // display: flex;
+      // justify-items: ;;
+    }
+  }
+  @media screen and (max-width:767px){
+    .nav-list-left{
+      img{
+        transform: scale(1.75)
+      }
+      .nav-item{
+        text-align: left;
+      }
+    }
+    .nav-list-right{
+      .nav-item{
+        font-size: .7rem;
+        margin-right: 8px;
+      }
+    }
+    .nav-item{
+      margin-right:0;
+    }
   }
 </style>
