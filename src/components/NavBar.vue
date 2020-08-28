@@ -3,19 +3,15 @@
     <ul class="nav-list-left">
       <li class="nav-item">
         <span>
-          <img src="../assets/vegetable_name.png">
+          <img src="../assets/logoName_.png">
         </span>
       </li>
     </ul>
     <ul class="nav-list-right">
-      <li class="nav-item">
-        <span>About Us 食堂起源</span>
-      </li>
-      <li class="nav-item">
-        <span>Mune 素說菜單</span>
-      </li>
-      <li class="nav-item">
-        <span>Contact Us 找到食堂</span>
+      <li class="nav-item"  v-for="item of items" :key="item.name" @click="scrollTo(item.id)">
+        <span>
+          {{ item.name }}
+        </span>
       </li>
     </ul>
   </v-app-bar>
@@ -24,9 +20,23 @@
 <script>
 export default {
   name: 'NavBar',
-  data: () => ({
-
-  })
+  data () {
+    return {
+      items: [
+        { name: 'Menu 素說菜單', id: 'menu' },
+        { name: 'About Us 食堂起源', id: 'begin' },
+        { name: 'Contact Us 找到食堂', id: 'location' }
+      ]
+    }
+  },
+  methods: {
+    goto (refName) {
+      var element = this.$refs[refName]
+      console.log(element)
+      var top = element.offsetTop
+      window.scrollTo(0, top)
+    }
+  }
 }
 </script>
 <style scoped>
@@ -34,9 +44,9 @@ export default {
     list-style: none;
   }
   .nav-list-left img{
-    width: 38%;
+    width: 70%;
     position: relative;
-    top: 4px;
+    top: 8px;
   }
   .nav-list-right{
     display: flex;
@@ -46,6 +56,6 @@ export default {
     cursor: pointer;
   }
   .nav-item{
-    margin-right: 18px;
+    margin-right: 50px;
   }
 </style>

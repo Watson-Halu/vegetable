@@ -1,17 +1,31 @@
 <template>
   <v-app>
     <v-main padding="0">
-       <NavBar/>
+      <NavBar/>
       <TopContent/>
+      <Menu/>
+      <Begin/>
+      <Location/>
     </v-main>
-    <v-footer app>
-    <!-- -->
+    <v-footer
+      absolute
+      class="font-weight-medium"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        &copy;{{ new Date().getFullYear() }} — <strong>素說食堂</strong>
+      </v-col>
     </v-footer>
   </v-app>
 </template>
 
 <script>
 import TopContent from './components/TopContent'
+import Menu from './components/Menu'
+import Begin from './components/Begin'
+import Location from './components/Location'
 import NavBar from './components/NavBar'
 
 export default {
@@ -19,11 +33,17 @@ export default {
 
   components: {
     TopContent,
+    Menu,
+    Begin,
+    Location,
     NavBar
   },
 
-  data: () => ({
+  data () {
     //
-  })
+  },
+  mounted () {
+    this.goto()
+  }
 }
 </script>
