@@ -1,14 +1,14 @@
 <template>
   <v-app-bar app>
     <ul class="nav-list-left">
-      <li class="nav-item">
+      <li class="nav-item" @click="goto('topView')">
         <span>
           <img src="../assets/logoName_.png">
         </span>
       </li>
     </ul>
     <ul class="nav-list-right">
-      <li class="nav-item"  v-for="item of items" :key="item.name" @click="scrollTo(item.id)">
+      <li class="nav-item"  v-for="item of items" :key="item.name" @click="goto(item.id)">
         <span>
           {{ item.name }}
           <span class="subtext">{{ item.subtext }}</span>
@@ -23,6 +23,7 @@ export default {
   name: 'NavBar',
   data () {
     return {
+      test: '',
       items: [
         { name: '素說菜單', subtext: 'Menu', id: 'menu' },
         { name: '食堂起源', subtext: 'About Us ', id: 'begin' },
@@ -32,10 +33,14 @@ export default {
   },
   methods: {
     goto (refName) {
-      var element = document.getelementById(refName)
-      console.log(element)
+      var element = document.getElementById(refName)
+      // console.log(element)
       var top = element.offsetTop
-      window.scrollTo(0, top)
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      })
+      // window.scrollTo(0, top)
     }
   }
 }
@@ -59,6 +64,7 @@ export default {
   .nav-item{
     margin-right: 50px;
     text-align: center;
+    cursor: pointer;
   }
   @media only screen and (max-width:1024px){
     .nav-list-left{
