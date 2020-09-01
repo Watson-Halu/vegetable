@@ -2,7 +2,7 @@
   <!-- <v-main padding="0"> -->
     <!-- Provides the application the proper gutter -->
     <v-container fluid pa-0>
-      <div class="topView">
+      <div class="topView" id="topView">
         <div class="topText">
           <img src="../assets/topLabel.png" fluid/>
         </div>
