@@ -115,6 +115,7 @@ export default {
     background-size: 90% 100%;
     text-align: center;
     padding: 10vh 5% 0 5%;
+    max-width: 100%;
     .menuTitle{
       font-size: 2rem;
       color: $color_word;
@@ -154,6 +155,9 @@ export default {
       ul{
         padding: 1vh 0 0 0;
         font-size: 1.4rem;
+        // .liLeft{
+        //   text-align: right;
+        // }
       }
     }
     .connectTopLeft{
@@ -175,7 +179,7 @@ export default {
   }
   @media only screen and (max-width:767px){
     .middleView{
-      padding: 10vh 5% 0 5%;
+      padding: 8vh 5% 0 5%;
       background-size: cover;
       height: 80vh;
       ul{
@@ -192,6 +196,7 @@ export default {
       border-width: 8vh 50vw 0 0;
     }
   }
+  // focus on iphone6/7/8
   @media only screen
   and (max-width:375px)
   and (device-height : 667px){
@@ -201,7 +206,7 @@ export default {
     .middleView{
       padding: 10vh 5% 0 5%;
       background-size: cover;
-      height: 80vh;
+      height: 90vh;
       ul{
         padding: .5vh 0 0 0;
         font-size: .85rem;
