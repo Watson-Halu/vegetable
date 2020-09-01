@@ -33,7 +33,8 @@ export default {
     height: 100vh;
     background-image: url("../assets/topBG.jpg");
     background-size: cover;
-    background-repeat: no-repeat center;
+    background-repeat: no-repeat;
+    background-position: center center;
     padding: 0;
     margin: 0;
   }

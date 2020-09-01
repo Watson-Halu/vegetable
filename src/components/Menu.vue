@@ -14,14 +14,14 @@
           <span class="subTitle">
             Menu
           </span>
-          <ul v-for='menu of menus' :key='menu.nameCN'>
-            <li >
+          <ul>
+            <li v-for='menu of menus' :key='menu.nameCN'>
               <span class="liLeft">
                 <span>
                 <img class="crown" src="../assets/crown.png"/>
                 </span>
-                {{ menu.nameCN }}<br>
-                {{ menu.nameEN }}
+                <sapn>{{ menu.nameCN }}</sapn><br>
+                <sapn class="menuEN">{{ menu.nameEN }}</sapn>
               </span>
               <span class="liright">··· ${{ menu.price }}</span>
             </li>
@@ -126,21 +126,24 @@ export default {
       color: $color_word;
     }
     ul{
-      padding: 2vh 35% 0 30%;
+      padding: 1vh 20% 0 20%;
       color: $color_word;
       font-size: 1.1rem;
       li{
         display: flex;
         justify-content: space-between;
-        margin-top: 1vh;
+        margin-top: 2vh;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         .crown{
-          width: 10%;
+          width: 7%;
           transform: scale(2.5)
         }
       }
       .liLeft{
         width: 100%;
+        .menuEN{
+          font-size: .85rem;
+        }
       }
       .liright{
         width: 100%;
@@ -149,15 +152,12 @@ export default {
   }
   @media only screen and (max-width:1024px){
     .middleView{
-      padding: 10vh 5% 0 5%;
+      padding: 8vh 5% 0 5%;
       background-size: cover;
       height: 80vh;
       ul{
-        padding: 1vh 0 0 0;
+        padding: .5vh 0 0 0;
         font-size: 1.4rem;
-        // .liLeft{
-        //   text-align: right;
-        // }
       }
     }
     .connectTopLeft{
@@ -177,14 +177,28 @@ export default {
       border-width: 8vh 50vw 0 0;
     }
   }
+  // ipad
+  @media only screen and (min-width:768px) and (max-width:1023px){
+    .middleView{
+      ul{
+        li{
+          margin-top: 1.5vh
+        }
+      }
+    }
+  }
+  // iphone X
   @media only screen and (max-width:767px){
     .middleView{
       padding: 8vh 5% 0 5%;
       background-size: cover;
       height: 80vh;
       ul{
-        padding: 1vh 0 0 0;
+        padding: .5vh 0 0 0;
         font-size: .85rem;
+        li{
+          margin-top: 1.5vh;
+        }
       }
     }
     .connectBottomLeft{
@@ -206,7 +220,7 @@ export default {
     .middleView{
       padding: 10vh 5% 0 5%;
       background-size: cover;
-      height: 90vh;
+      height: 100vh;
       ul{
         padding: .5vh 0 0 0;
         font-size: .85rem;

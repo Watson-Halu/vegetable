@@ -89,7 +89,7 @@ export default {
       background-size: cover;
     }
   }
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width:767px){
     .bottomView{
       height: 120vh;
       padding-top: 10vh;
@@ -97,7 +97,7 @@ export default {
     }
   }
   @media only screen
-  and (max-width:768px)
+  and (max-width:767px)
   and (device-height : 667px){
     .mainTitle{
       font-size: 1.75rem;
