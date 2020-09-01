@@ -59,9 +59,6 @@ export default {
   .nav-item{
     margin-right: 50px;
     text-align: center;
-    .subtext{
-      display: block;
-    }
   }
   @media only screen and (max-width:1024px){
     .nav-list-left{
@@ -86,6 +83,9 @@ export default {
       }
       .nav-item{
         text-align: left;
+        .subtext{
+          display: block;
+        }
       }
     }
     .nav-list-right{
@@ -96,6 +96,9 @@ export default {
     }
     .nav-item{
       margin-right:0;
+      .subtext{
+          display: block;
+        }
     }
   }
 </style>
