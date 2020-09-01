@@ -48,12 +48,12 @@ export default {
       menus: [
         // 主要放推薦的7個
         { nameCN: '蕈菇義大利麵', nameEN: 'Mushroom spaghetti', price: 120 },
-        { nameCN: '蕈菇義大利麵', nameEN: 'Mushroom spaghetti', price: 120 },
-        { nameCN: '蕈菇義大利麵', nameEN: 'Mushroom spaghetti', price: 120 },
-        { nameCN: '蕈菇義大利麵', nameEN: 'Mushroom spaghetti', price: 120 },
-        { nameCN: '蕈菇義大利麵', nameEN: 'Mushroom spaghetti', price: 120 },
-        { nameCN: '蕈菇義大利麵', nameEN: 'Mushroom spaghetti', price: 120 },
-        { nameCN: '蕈菇義大利麵', nameEN: 'Mushroom spaghetti', price: 120 }
+        { nameCN: '紅油炒手', nameEN: 'Fried hands in red oil', price: 120 },
+        { nameCN: '經典蕈菇燉飯', nameEN: 'Classic Mushroom Stewed Rice', price: 120 },
+        { nameCN: '台式炸醬猴頭菇', nameEN: 'Taiwanese Fried Hericium with Sauce', price: 120 },
+        { nameCN: '獨家杏鮑菇套餐', nameEN: 'Exclusive King Pleurotus Set', price: 120 },
+        { nameCN: '九層塔蛋蓋飯', nameEN: 'Nine-tiered pagoda egg rice bowl', price: 120 },
+        { nameCN: '酸辣湯麵', nameEN: 'Hot and sour noodle soup', price: 120 }
       ]
     }
   }
