@@ -14,7 +14,17 @@
           <div class="mainContent">
             <div class="leftSide">
               <div class="map">
-                <img src="../assets/location.png"/>
+                <GMap
+                v-if="!isLoading"
+                :center="{lat, lng}"
+                :restaurants="restaurants"
+                :streetViewControl="false"
+                :mapTypeControl="false"
+                :fullscreenControl="true"
+                :zoomControl="true"
+                :zoom="17"
+              ></GMap>
+                <!-- <img src="../assets/map.png"/> -->
               </div>
             </div>
             <div class="rightSide">
@@ -48,16 +58,23 @@
 </template>
 
 <script>
+// 載入 GMap Component
+import GMap from './Gmap.vue'
 export default {
   name: 'Location',
-
+  components: {
+    GMap
+  },
   data () {
     return {
       information: [
-        { title: 'Address', text: '台中市山西路xxxxxxxxxxxx' },
-        { title: 'Phone Number', text: '(04)1234-5678' },
-        { title: 'Opening', text: '11:00 - 20:00' }
-      ]
+        { title: 'Address', text: '台中市北區漢口路三段168號之2' },
+        { title: 'Phone Number', text: '(04)2298-9828 | 0938-780508' },
+        { title: 'Opening', text: '早 11:00 - 14:00 | 晚 17:00 - 20:00' }
+      ],
+      lat: 24.166877,
+      lng: 120.671597,
+      restaurants: []
     }
   },
   methods: {
@@ -67,6 +84,10 @@ export default {
 <style lang="scss" scoped>
   $color_word: #faecb9;
   $color_main: #729ea1;
+  .google-map {
+  width: 100%;
+  height: 35vh;
+  }
   .pointUp{
     width: 0;
     height: 15vh;
@@ -107,9 +128,9 @@ export default {
             img{
               width: 100%;
               height: 35vh;
-              border: 2px solid $color_main;
-              object-fit: cover;
-              box-shadow: 10px 10px 40px 10px $color_main;
+              // border: 2px solid $color_main;
+              object-fit: contain;
+              // box-shadow: 10px 10px 40px 10px $color_main;
             }
           }
         }
