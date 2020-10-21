@@ -14,7 +14,7 @@
           <div class="mainContent">
             <div class="leftSide">
               <div class="map">
-                <GMap
+                <!-- <GMap
                 v-if="!isLoading"
                 :center="{lat, lng}"
                 :restaurants="restaurants"
@@ -23,8 +23,8 @@
                 :fullscreenControl="true"
                 :zoomControl="true"
                 :zoom="17"
-              ></GMap>
-                <!-- <img src="../assets/map.png"/> -->
+              ></GMap> -->
+                <img src="../assets/map2.png"/>
               </div>
             </div>
             <div class="rightSide">
@@ -42,6 +42,10 @@
                     <p>{{ information[2].title }}</p>
                     <span>{{ information[2].text }}</span>
                   </li>
+                  <!-- <li>
+                    <p>{{ information[3].title }}</p>
+                    <span>{{ information[3].text }}<img src="../assets">{{ information[3].url }}</img></span>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -59,18 +63,19 @@
 
 <script>
 // 載入 GMap Component
-import GMap from './Gmap.vue'
+// import GMap from './Gmap.vue'
 export default {
   name: 'Location',
   components: {
-    GMap
+    // GMap
   },
   data () {
     return {
       information: [
-        { title: 'Address', text: '台中市北區漢口路三段168號之2' },
+        { title: 'Address', text: '台中市北區漢口路三段168-2號' },
         { title: 'Phone Number', text: '(04)2298-9828 | 0938-780508' },
-        { title: 'Opening', text: '早 11:00 - 14:00 | 晚 17:00 - 20:00' }
+        { title: 'Opening', text: '早 11:00 - 14:00 | 晚 17:00 - 20:00' },
+        { title: 'Social', text: '粉絲團', url: 'https://reurl.cc/WLb4ve' }
       ],
       lat: 24.166877,
       lng: 120.671597,
@@ -169,11 +174,14 @@ export default {
       }
     }
     .information{
-      padding-top: 5vh;
+      // padding-top: 5vh;
       ul{
         padding: 0;
         li{
           font-size: 1.5rem!important;
+          p{
+            font-size: 16px;
+          }
         }
       }
     }
@@ -183,12 +191,18 @@ export default {
   }
   @media only screen and (max-width:768px){
     .information{
-      padding-top: 5vh;
+      // padding-top: 5vh;
+      font-size: .9rem;
       ul{
         padding: 0;
         li{
-          font-size: 1.2rem!important;
+          font-size: 1rem!important;
         }
+      }
+    }
+    .bottomView{
+      .contactUs{
+        padding:  25px 50px;
       }
     }
   }
@@ -196,7 +210,7 @@ export default {
   and (max-width:375px)
   and (device-height : 667px){
     .information{
-      padding-top: 5vh;
+      // padding-top: 5vh;
       ul{
         padding: 0;
         li{
