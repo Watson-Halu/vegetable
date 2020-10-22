@@ -94,6 +94,9 @@ export default {
       height: 120vh;
       padding-top: 10vh;
       background-size: cover;
+      .content{
+        font-size:.9rem;
+      }
     }
   }
   @media only screen
