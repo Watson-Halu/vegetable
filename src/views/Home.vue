@@ -8,7 +8,7 @@
       <Location/>
     </v-main>
     <v-footer
-      class="font-weight-medium"
+      class="font-weight-medium footer"
     >
       <v-col
         class="text-center"
@@ -40,3 +40,10 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  .footer{
+    position: absolute;
+    width: 100%;
+    bottom:0;
+  }
+</style>
