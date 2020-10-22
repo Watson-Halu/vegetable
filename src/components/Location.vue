@@ -130,6 +130,7 @@ export default {
           width: 100%;
           text-align: right;
           .map {
+            background-image: url();
             img{
               width: 100%;
               height: 35vh;
@@ -204,6 +205,15 @@ export default {
       .contactUs{
         padding:  25px 50px;
       }
+    }
+    .mainContent{
+        .leftSide{
+          .map {
+            img{
+              transform: scale(1.1)
+            }
+          }
+        }
     }
   }
   @media only screen

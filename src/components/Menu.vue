@@ -48,7 +48,7 @@ export default {
       menus: [
         // 主要放推薦的7個
         { nameCN: '素蚵仔煎(辣/不辣)', nameEN: 'Vegetarian Oyster Fried', price: 60 },
-        { nameCN: '麻將麵', nameEN: 'Sesame noodles', price: 45 },
+        { nameCN: '麻醬麵', nameEN: 'Sesame noodles', price: 45 },
         { nameCN: '麻香麵線', nameEN: 'Sesame thin noodles', price: 55 },
         { nameCN: '麻婆豆腐蓋飯', nameEN: 'Mapo tofu rice', price: 65 },
         { nameCN: '咖哩飯', nameEN: 'Curry rice', price: 65 },
