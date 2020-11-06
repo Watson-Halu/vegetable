@@ -40,7 +40,8 @@
                   </li>
                   <li>
                     <p>{{ information[2].title }}</p>
-                    <span>{{ information[2].text }}</span>
+                    <span>{{ information[2].text }}</span><br>
+                    <span>{{ information[3].text }}</span>
                   </li>
                   <!-- <li>
                     <p>{{ information[3].title }}</p>
@@ -75,6 +76,7 @@ export default {
         { title: 'Address', text: '台中市北區漢口路三段168-2號' },
         { title: 'Phone Number', text: '(04)2298-9828 | 0938-780508' },
         { title: 'Opening', text: '早 11:00 - 14:00 | 晚 17:00 - 20:00' },
+        { title: 'Opening', text: '(週日公休)' },
         { title: 'Social', text: '粉絲團', url: 'https://reurl.cc/WLb4ve' }
       ],
       lat: 24.166877,
